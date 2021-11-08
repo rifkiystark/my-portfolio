@@ -15,3 +15,16 @@ code {
   color:#FFD600;
 }
 
+.footer {
+  background: #2f2f2f;
+  color: white;
+  text-align: center;
+  padding: 24px;
+}
+
+a {
+  color: white !important;
+  font-weight: bold;
+  
+}
+
