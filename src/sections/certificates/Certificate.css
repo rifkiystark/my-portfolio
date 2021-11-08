@@ -1,0 +1,23 @@
+.card-certificate{
+    border-radius: 16px;
+    transition: all ease 0.3s;
+}
+
+.card-certificate:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 16px #ececec;
+    transition: all ease 0.3s;
+    border-color: transparent;
+    transform: scale(1.03);
+}
+
+.img-certificate{
+    border-radius: 16px 16px 0px 0px;
+}
+
+.certificates{
+        padding-top: 64px;
+    
+        padding-bottom: 64px;
+    
+}

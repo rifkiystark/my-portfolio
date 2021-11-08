@@ -1,6 +1,14 @@
 .card-project {
     margin-bottom: 32px;
     border-radius: 24px;
+    transition: all ease 0.3s;
+}
+.card-project:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 16px #e5e5e5;
+    transition: all ease 0.3s;
+    border-color: transparent;
+    transform: scale(1.01);
 }
 
 .card-project-col-left{

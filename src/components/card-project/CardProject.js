@@ -2,11 +2,14 @@ import { Card, Col, Row } from "react-bootstrap"
 import "./CardProject.css"
 
 function CardProject({product}) {
+    const openProject = (url) => {
+        window.open(url);
+    }
     return (
-        <Card body className="card-project">
+        <Card body className="card-project" onClick={() => openProject(product.url)}>
             <Row>
                 <Col md={6} sm={12} className="card-project-col-left">
-                    <img src={product.image} alt="" />
+                    <img src={product.image} alt="" className="img img-fluid"/>
                 </Col>
                 <Col md={6} sm={12} className="card-project-col-right">
                     <div className="card-project-title">{product.productName}</div>
