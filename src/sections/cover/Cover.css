@@ -1,0 +1,34 @@
+.section-cover {
+    text-align: center;
+}
+
+.cover-header {
+    background: radial-gradient(50% 50% at 50% 50%, #1B1B1B 0%, #1D1D1D 0.01%, #1A1A1A 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.title-header {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 32px;
+}
+
+.divider-header {
+    width: 4px;
+    height: 36px;
+    background: white;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+.subtitle-header {
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 12px;
+}
