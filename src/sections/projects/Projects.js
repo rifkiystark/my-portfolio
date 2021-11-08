@@ -1,10 +1,11 @@
+import TitleSection from "../../components/title-section/TitleSection";
 import "./Projects.css"
 
 function Projects() {
     return (
-        <>
-            Halo
-        </>
+        <div className="projects">
+            <TitleSection>Projects</TitleSection>
+        </div>
     )
 }
 
