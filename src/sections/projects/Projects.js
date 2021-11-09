@@ -10,8 +10,10 @@ function Projects() {
             <Container>
                 <TitleSection>Projects</TitleSection>
                 <div className="wrapper-card-project">
-                    {dataProducts.map((product) =>
-                        <CardProject product={product} />
+                    {dataProducts.map((product, idx) =>
+
+                        <CardProject key={idx} product={product} />
+
                     )}
                 </div>
 
