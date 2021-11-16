@@ -23,7 +23,7 @@ function CardProject({ product }) {
                     <Col md={6} sm={12} className="card-project-col-right">
                         <div className="card-project-title">{product.productName}</div>
                         <div className="card-project-content">{product.description}</div>
-                        <div className="card-project-title-tech-stack">Tech Stack</div>
+                        <div className="card-project-title-tech-stack">Built with</div>
                         <div className="card-project-content-tech-stack">
                             {product.techStack.map((tech, idx) => <img key={idx} src={tech} alt="" className="tech-stack" />)}
                         </div>

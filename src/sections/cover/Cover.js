@@ -19,6 +19,8 @@ function Cover() {
                     <a href="https://wa.me/0895417459300" className="information-header">Phone</a>
                     <div className="information-header">|</div> 
                     <a href="https://www.dicoding.com/users/anandarifkiy/academies" className="information-header">Dicoding</a>
+                    <div className="information-header">|</div> 
+                    <a href="https://www.instagram.com/anndrfky_/" className="information-header">Instagram</a>
                 </div>
             </div>
         </div>
