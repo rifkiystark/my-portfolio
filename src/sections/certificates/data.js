@@ -24,7 +24,7 @@ const dataCertificates = [
     },
     {
         title: "Dicoding : Belajar Membuat Aplikasi Android Untuk Pemula",
-        subtitle: "Valid until Maret 8, 2024",
+        subtitle: "Valid until March 8, 2024",
         image: aplikasiAndroidUntukPemula,
         url: "https://www.dicoding.com/certificates/98XW6O6QWXM3"
     },

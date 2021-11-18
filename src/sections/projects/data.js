@@ -3,6 +3,7 @@ import simpegProduct from "../../images/products/simpeg.png";
 import cekrpsProduct from "../../images/products/cekrps.png";
 import koreksiinProduct from "../../images/products/koreksiin.png";
 import mazidaProduct from "../../images/products/mazida.png";
+import prokusProduct from "../../images/products/prokus.png";
 
 
 import laravelTech from "../../images/tech-stack/laravel.png";
@@ -48,6 +49,13 @@ const dataProducts = [
         techStack: [expressjsTech, mongodbTech, kotlinTech],
         image: mazidaProduct,
         url: "https://drive.google.com/file/d/1d5LOIgejBLzVMGX_z79vWg0kKV_ykJd8/view?usp=sharing"
+    },
+    {
+        productName: "ProKus ITTP",
+        description: "Prokus ITTP is a web and android application collaboration between ITTP (Institut Teknologi Telkom Purwokerto) and Kemensos. I’m focussing built presence features and log book.",
+        techStack: [laravelTech, mysqlTech, kotlinTech],
+        image: prokusProduct,
+        url: "https://prokus.ittelkom-pwt.ac.id/"
     },
 ];
 
