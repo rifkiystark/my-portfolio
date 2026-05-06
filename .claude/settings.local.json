@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm ci *)",
+      "Bash(NODE_OPTIONS=--openssl-legacy-provider npm run *)",
+      "Bash(npm install *)"
+    ]
+  }
+}

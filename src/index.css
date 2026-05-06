@@ -1,30 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-ink: #141414;
+  --color-graphite: #1b1b1d;
+  --color-graphite-soft: #252529;
+  --color-paper: #f6f0e4;
+  --color-paper-muted: #ece3d0;
+  --color-card: #fffaf0;
+  --color-muted: #6f695f;
+  --color-line: rgba(20, 20, 20, 0.12);
+  --color-line-dark: rgba(255, 250, 240, 0.16);
+  --color-accent: #ffd600;
+  --color-accent-deep: #c59a00;
+  --font-display: 'Archivo Black', Impact, sans-serif;
+  --font-body: 'Manrope', 'Helvetica Neue', sans-serif;
+  --container: 1160px;
+  --radius-xs: 10px;
+  --radius-sm: 18px;
+  --radius-md: 28px;
+  --radius-lg: 42px;
+  --shadow-card: 0 24px 70px rgba(31, 24, 10, 0.12);
+  --shadow-hard: 12px 12px 0 rgba(20, 20, 20, 0.92);
+  --focus-ring: 0 0 0 4px rgba(255, 214, 0, 0.34);
+  --section-padding: clamp(72px, 9vw, 128px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif !important;
+  min-width: 320px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  color: white !important;
+body::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
 }
 
-.text-yellow {
-  color:#FFD600;
+img {
+  max-width: 100%;
 }
 
-.footer {
-  background: #2f2f2f;
-  color: white;
-  text-align: center;
-  padding: 24px;
+button,
+a {
+  font: inherit;
 }
 
 a {
-  color: white !important;
-  font-weight: bold;
-  
+  color: inherit;
+  text-decoration: none;
 }
 
+a:hover {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+.card-project:focus-visible,
+.card-certificate:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+}
+
+.text-yellow {
+  color: var(--color-accent);
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: var(--container) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

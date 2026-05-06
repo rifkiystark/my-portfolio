@@ -1,73 +1,316 @@
 .section-cover {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(250px, 0.82fr) minmax(360px, 1.35fr) minmax(230px, 0.68fr);
+    gap: 1px;
+    overflow: hidden;
+    color: var(--color-card);
+    background: var(--color-ink);
+}
+
+.section-cover::before {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    content: '';
+    opacity: 0.3;
+    background:
+        radial-gradient(circle at 72% 18%, rgba(255, 214, 0, 0.28), transparent 20rem),
+        linear-gradient(90deg, rgba(255, 250, 240, 0.18) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 250, 240, 0.14) 1px, transparent 1px);
+    background-size: auto, 58px 58px, 58px 58px;
+}
+
+.cover-panel {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    border-right: 1px solid var(--color-line-dark);
+    background: rgba(20, 20, 20, 0.68);
+}
+
+.cover-panel--identity {
+    display: grid;
+    align-content: end;
+    gap: 18px;
+    padding: clamp(88px, 8vw, 124px) clamp(18px, 3vw, 32px) clamp(24px, 4vw, 46px);
+}
+
+.cover-id-card {
+    position: relative;
+    border: 1px solid rgba(255, 250, 240, 0.16);
+    border-radius: 34px;
+    padding: 14px;
+    background: linear-gradient(155deg, rgba(255, 250, 240, 0.12), rgba(255, 250, 240, 0.03));
+}
+
+.img-header {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 24px;
+    filter: grayscale(0.18) contrast(1.06) saturate(0.9);
+}
+
+.profile-stamp {
+    position: absolute;
+    right: -18px;
+    bottom: 22px;
+    width: min(210px, 82%);
+    padding: 14px 16px;
+    border: 1px solid var(--color-line);
+    border-radius: 18px;
+    color: var(--color-ink);
+    background: var(--color-accent);
+    box-shadow: 9px 9px 0 rgba(255, 250, 240, 0.16);
+}
+
+.profile-stamp span,
+.profile-stamp strong {
+    display: block;
+}
+
+.profile-stamp span {
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.profile-stamp strong {
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.cover-contact-card {
+    border: 1px solid rgba(255, 250, 240, 0.14);
+    border-radius: 26px;
+    padding: 18px;
+    background: rgba(255, 250, 240, 0.06);
+}
+
+.cover-contact-card > span {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--color-accent);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.cover-contact-card nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.cover-contact-card a {
+    padding: 10px 11px;
+    border: 1px solid rgba(255, 250, 240, 0.1);
+    border-radius: 999px;
+    color: rgba(255, 250, 240, 0.78);
+    font-size: 0.76rem;
+    font-weight: 900;
     text-align: center;
 }
 
-.cover-header {
-    background: radial-gradient(50% 50% at 50% 50%, #1B1B1B 0%, #1D1D1D 0.01%, #1A1A1A 100%);
-    min-height: 100vh;
+.cover-contact-card a:hover {
+    color: var(--color-ink);
+    background: var(--color-card);
+}
+
+.cover-panel--statement {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    padding: clamp(92px, 10vw, 150px) clamp(28px, 6vw, 82px);
+}
+
+.cover-kicker {
+    margin: 0 0 22px;
+    color: var(--color-accent);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
 }
 
 .title-header {
-    font-size: 64px;
-    font-weight: bold;
-    margin-top: 32px;
-}
-
-.divider-header {
-    width: 4px;
-    height: 36px;
-    background: white;
-    border-radius: 2px;
-    margin-top: 8px;
+    max-width: 860px;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.4rem, 8.8vw, 8.6rem);
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -0.09em;
+    text-transform: uppercase;
 }
 
 .subtitle-header {
-    font-size: 40px;
-    font-weight: 500;
-    margin-top: 12px;
+    max-width: 720px;
+    margin: clamp(26px, 4vw, 42px) 0 0;
+    color: rgba(255, 250, 240, 0.78);
+    font-size: clamp(1.05rem, 1.8vw, 1.36rem);
+    font-weight: 600;
+    line-height: 1.78;
 }
 
-.wrapper-information-header {
-    margin: 16px 16px 32px 16px;
+.cover-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 42px;
 }
 
-.information-header{
-    margin: 0px 2px;
+.cover-button {
     display: inline-flex;
-    font-size: 18px;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 900;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-@media only screen and (max-width:808px) {
-    .title-header {
-        font-size: 48px;
-        font-weight: bold;
-        margin-top: 24px;
+.cover-button:hover {
+    transform: translateY(-3px);
+}
+
+.cover-button--primary {
+    color: var(--color-ink);
+    background: var(--color-accent);
+    box-shadow: 9px 9px 0 rgba(255, 250, 240, 0.12);
+}
+
+.cover-button--ghost {
+    color: var(--color-card);
+    border-color: rgba(255, 250, 240, 0.24);
+    background: rgba(255, 250, 240, 0.06);
+}
+
+.cover-panel--stack {
+    display: grid;
+    align-content: space-between;
+    gap: 28px;
+    padding: clamp(88px, 8vw, 124px) clamp(16px, 2.6vw, 28px) clamp(24px, 4vw, 46px);
+}
+
+.stack-board {
+    display: grid;
+    gap: 12px;
+}
+
+.stack-board__label {
+    color: var(--color-accent);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.stack-board__item {
+    display: block;
+    padding: 13px 14px;
+    border: 1px solid rgba(255, 250, 240, 0.14);
+    border-radius: 18px;
+    color: rgba(255, 250, 240, 0.86);
+    font-size: clamp(0.84rem, 1.4vw, 1rem);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(255, 250, 240, 0.06);
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+.stack-board__item:hover {
+    color: var(--color-ink);
+    background: var(--color-accent);
+    transform: translateX(-8px);
+}
+
+.cover-metric-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.cover-metric-grid div {
+    padding: 18px;
+    border: 1px solid rgba(255, 250, 240, 0.14);
+    border-radius: 22px;
+    background: rgba(255, 250, 240, 0.05);
+}
+
+.cover-metric-grid strong {
+    display: block;
+    color: var(--color-accent);
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+}
+
+.cover-metric-grid span {
+    display: block;
+    margin-top: 9px;
+    color: rgba(255, 250, 240, 0.68);
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+@media (max-width: 1199px) {
+    .section-cover {
+        grid-template-columns: minmax(320px, 1fr) minmax(320px, 1.1fr);
     }
-    .subtitle-header {
-        font-size: 32px;
-        font-weight: 500;
-        margin: 12px 16px 0px 16px;
-        margin-top: 12px;
-    }
-    .img-header{
-        width: 32vw;
+
+    .cover-panel--stack {
+        grid-column: 1 / -1;
+        min-height: auto;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 30px;
     }
 }
 
-@media only screen and (max-width:480px) {
-    .title-header {
-        font-size: 32px;
-        font-weight: bold;
-        margin-top: 16px;
+@media (max-width: 767px) {
+    .section-cover {
+        grid-template-columns: 1fr;
     }
-    .img-header{
-        width: 32vw;
+
+    .cover-panel {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-line-dark);
+    }
+
+    .cover-panel--identity {
+        padding-top: 92px;
+    }
+
+    .cover-panel--statement {
+        padding: 38px 22px;
+    }
+
+    .cover-panel--stack {
+        grid-template-columns: 1fr;
+        padding: 28px 22px 42px;
+    }
+
+    .cover-contact-card nav {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-actions,
+    .cover-button {
+        width: 100%;
+    }
+
+    .profile-stamp {
+        right: 12px;
     }
 }
-
